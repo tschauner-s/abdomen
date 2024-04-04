@@ -49,6 +49,9 @@
   <input type="submit" value="Eintragen">
 </form>
 
+<!-- Success message element -->
+<p id="successMessage" style="display: none; color: green;">Formular erfolgreich übermittelt!</p>
+
   <script>
   window.addEventListener("load", function() {
   const form = document.getElementById('abdomen');
@@ -61,7 +64,11 @@
       body: data,
     })
     .then(() => {
-      alert("Success!");
+      document.getElementById("successMessage").style.display = "block";
+      // Hide the form
+      setTimeout(function() {
+        document.getElementById("successMessage").style.display = "none";
+      }, 4000);
     })
   });
 });
