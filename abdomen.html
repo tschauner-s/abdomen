@@ -4,9 +4,12 @@
   <title>Abdomen x-ray</title>
 </head>
 <style>
-  input {
-    margin-bottom: 3rem;
+
+  label {
+    display:block;margin-top: 1rem;
   }
+
+
 </style>
   
 <body>
@@ -21,36 +24,36 @@
   <label for="rater">Rater:</label><br>
   <input type="text" id="rater" name="rater" placeholder="lastname"><br>
 
-  <label for="id">ID:</label><br>
-  <input type="number" id="id" name="id"><br>
+  <label for="id">ID:</label>
+  <input type="number" id="id" name="id">
 
   <!-- Changed to checkbox input for "Abdomen vollständig erfasst" -->
-  <label for="bildVollstaendig">Bild vollstaendig:</label><br>
-  <input type="checkbox" id="bildVollstaendig" name="bild_vollstaendig" value="true" checked><br>
+  <label for="bildVollstaendig">Bild vollstaendig:</label>
+  <input type="checkbox" id="bildVollstaendig" name="bild_vollstaendig" value="true" checked>
 
-  <label for="freieLuft">Freie Luft nachweisbar:</label><br>
-  nein <input type="range" id="freieLuft" name="freie_luft" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja<br>
+  <label for="freieLuft">Freie Luft nachweisbar:</label>
+  nein <input type="range" id="freieLuft" name="freie_luft" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja
 
-  <label for="ileuszeichen">Ileuszeichen nachweisbar:</label><br>
-  nein <input type="range" id="ileuszeichen" name="ileuszeichen" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja<br>
+  <label for="ileuszeichen">Ileuszeichen nachweisbar:</label>
+  nein <input type="range" id="ileuszeichen" name="ileuszeichen" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja<
 
-  <label for="pneumatosisIntestinalis">Pneumatosis intestinalis nachweisbar:</label><br>
-  nein <input type="range" id="pneumatosisIntestinalis" name="pneumatosis_intestinalis" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja<br>
+  <label for="pneumatosisIntestinalis">Pneumatosis intestinalis nachweisbar:</label>
+  nein <input type="range" id="pneumatosisIntestinalis" name="pneumatosis_intestinalis" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja
 
-  <label for="konkremente">Konkremente nachweisbar:</label><br>
-  nein <input type="range" id="konkremente" name="konkremente" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja<br>
+  <label for="konkremente">Konkremente nachweisbar:</label>
+  nein <input type="range" id="konkremente" name="konkremente" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja
 
-  <label for="leberschatten">Leberschatten (Abgrenzbarkeit):</label><br>
-  schlecht <input type="range" id="leberschatten" name="leberschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut<br>
+  <label for="leberschatten">Leberschatten (Abgrenzbarkeit):</label>
+  schlecht <input type="range" id="leberschatten" name="leberschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut
 
-  <label for="nierenschatten">Nierenschatten (Abgrenzbarkeit):</label><br>
-  schlecht <input type="range" id="nierenschatten" name="nierenschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut<br>
+  <label for="nierenschatten">Nierenschatten (Abgrenzbarkeit):</label>
+  schlecht <input type="range" id="nierenschatten" name="nierenschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut
 
-  <label for="milzschatten">Milzschatten (Abgrenzbarkeit):</label><br>
-  schlecht <input type="range" id="milzschatten" name="milzschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut<br>
+  <label for="milzschatten">Milzschatten (Abgrenzbarkeit):</label>
+  schlecht <input type="range" id="milzschatten" name="milzschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut
 
-  <label for="psoasschatten">Psoasschatten (Abgrenzbarkeit):</label><br>
-  schlecht <input type="range" id="psoasschatten" name="psoasschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut<br>
+  <label for="psoasschatten">Psoasschatten (Abgrenzbarkeit):</label>
+  schlecht <input type="range" id="psoasschatten" name="psoasschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut
 
   <input type="submit" value="Eintragen">
 </form>
