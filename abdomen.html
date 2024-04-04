@@ -59,7 +59,7 @@ document.getElementById("customForm").addEventListener("submit", function(event)
   var jsonData = JSON.stringify(jsonObject);
 
   // Send form data to Google Apps Script endpoint
-  fetch('https://script.google.com/macros/s/AKfycbwYC0nnr6V7v-s8I15O7_DbSfH6yznbJa3cRiOHVcKFsUHdBrtDIsZj9xhuLftRPBQS/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbym4iaJByGmFCKoiWAV4BmCKI0LSj8hh36dOFSFuCHpgrN6qRpMkAGh3tJMPpNBurMP/exec', {
     method: 'POST',
     body: jsonData
   })
