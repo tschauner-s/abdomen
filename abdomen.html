@@ -32,31 +32,31 @@
   <input type="checkbox" id="bildVollstaendig" name="bild_vollstaendig" value="true" checked>
 
   <label for="freieLuft">Freie Luft nachweisbar:</label>
-  nein <input type="range" id="freieLuft" name="freie_luft" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja
+  nein <input type="range" id="freieLuft" name="freie_luft" min="0" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja
 
   <label for="ileuszeichen">Ileuszeichen nachweisbar:</label>
-  nein <input type="range" id="ileuszeichen" name="ileuszeichen" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja<
+  nein <input type="range" id="ileuszeichen" name="ileuszeichen" min="0" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja<
 
   <label for="pneumatosisIntestinalis">Pneumatosis intestinalis nachweisbar:</label>
   nein <input type="range" id="pneumatosisIntestinalis" name="pneumatosis_intestinalis" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja
 
   <label for="konkremente">Konkremente nachweisbar:</label>
-  nein <input type="range" id="konkremente" name="konkremente" min="1" max="100" value="1" style="display:inline-block; vertical-align:middle"> ja
+  nein <input type="range" id="konkremente" name="konkremente" min="0" max="100" value="0" style="display:inline-block; vertical-align:middle"> ja
 
   <label for="leberschatten">Leberschatten (Abgrenzbarkeit):</label>
-  schlecht <input type="range" id="leberschatten" name="leberschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut
+  schlecht <input type="range" id="leberschatten" name="leberschatten" min="0" max="100" style="display:inline-block; vertical-align:middle"> gut
 
   <label for="nierenschatten">Nierenschatten (Abgrenzbarkeit):</label>
-  schlecht <input type="range" id="nierenschatten" name="nierenschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut
+  schlecht <input type="range" id="nierenschatten" name="nierenschatten" min="0" max="100" style="display:inline-block; vertical-align:middle"> gut
 
   <label for="milzschatten">Milzschatten (Abgrenzbarkeit):</label>
-  schlecht <input type="range" id="milzschatten" name="milzschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut
+  schlecht <input type="range" id="milzschatten" name="milzschatten" min="0" max="100" style="display:inline-block; vertical-align:middle"> gut
 
   <label for="psoasschatten">Psoasschatten (Abgrenzbarkeit):</label>
-  schlecht <input type="range" id="psoasschatten" name="psoasschatten" min="1" max="100" style="display:inline-block; vertical-align:middle"> gut
+  schlecht <input type="range" id="psoasschatten" name="psoasschatten" min="0" max="100" style="display:inline-block; vertical-align:middle"> gut
   
   <label for="obstipation">Obstipation ():</label>
-  nein <input type="range" id="obstipation" name="obstipation" min="1" max="100" style="display:inline-block; vertical-align:middle"> ja
+  nein <input type="range" id="obstipation" name="obstipation" min="0" max="100" style="display:inline-block; vertical-align:middle"> ja
     
   <br>
   <input type="submit" value="Eintragen">
@@ -77,15 +77,15 @@
       body: data,
     })
     .then(() => {
-      document.getElementById("ileuszeichen").value = "1";
-      document.getElementById("freieLuft").value = "1";
-      document.getElementById("konkremente").value = "1";
-      document.getElementById("pneumatosisIntestinalis").value = "1";
-      document.getElementById("ileuszeichen").value = "1";
-      document.getElementById("leberschatten").value = "51";
-      document.getElementById("nierenschatten").value = "51";
-      document.getElementById("milzschatten").value = "51";
-      document.getElementById("psoasschatten").value = "51";
+      document.getElementById("ileuszeichen").value = "50";
+      document.getElementById("freieLuft").value = "50";
+      document.getElementById("konkremente").value = "50";
+      document.getElementById("pneumatosisIntestinalis").value = "50";
+      document.getElementById("ileuszeichen").value = "50";
+      document.getElementById("leberschatten").value = "50";
+      document.getElementById("nierenschatten").value = "50";
+      document.getElementById("milzschatten").value = "50";
+      document.getElementById("psoasschatten").value = "50";
       document.getElementById("successMessage").style.display = "block";
       // Hide the form
       setTimeout(function() {
