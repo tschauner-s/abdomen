@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Abdomen x-ray</title>
+</head>
+<body>
+
+<h2>Abdomen x-ray</h2>
+
+<form id="customForm">
+  <label for="id">ID:</label><br>
+  <input type="number" id="id" name="id"><br>
+
+  <label for="rater">Rater:</label><br>
+  <input type="text" id="rater" name="rater"><br>
+
+<!-- Changed to checkbox input for "Bild vollstaendig" -->
+  <label for="bildVollstaendig">Bild vollstaendig:</label><br>
+  <input type="checkbox" id="bildVollstaendig" name="bildVollstaendig" value="true" checked><br>
+
+  <label for="freieLuft">Freie Luft:</label><br>
+  <input type="range" id="freieLuft" name="freieLuft" min="1" max="100" value="1"><br>
+
+  <label for="ileuszeichen">Ileuszeichen:</label><br>
+  <input type="range" id="ileuszeichen" name="ileuszeichen" min="1" max="100" value="1"><br>
+
+  <label for="pneumatosisIntestinalis">Pneumatosis intestinalis:</label><br>
+  <input type="range" id="pneumatosisIntestinalis" name="pneumatosisIntestinalis" min="1" max="100" value="1"><br>
+
+  <label for="konkremente">Konkremente:</label><br>
+  <input type="range" id="konkremente" name="konkremente" min="1" max="100" value="1"><br>
+
+  <label for="leberschatten">Leberschatten:</label><br>
+  <input type="range" id="leberschatten" name="leberschatten" min="1" max="100"><br>
+
+  <label for="nierenschatten">Nierenschatten:</label><br>
+  <input type="range" id="nierenschatten" name="nierenschatten" min="1" max="100"><br>
+
+  <label for="milzschatten">Milzschatten:</label><br>
+  <input type="range" id="milzschatten" name="milzschatten" min="1" max="100"><br>
+
+  <label for="psoasschatten">Psoasschatten:</label><br>
+  <input type="range" id="psoasschatten" name="psoasschatten" min="1" max="100"><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+document.getElementById("customForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  var formData = new FormData(this); // Get form data
+
+  // Convert form data to JSON
+  var jsonObject = {};
+  formData.forEach(function(value, key) {
+    jsonObject[key] = value;
+  });
+  var jsonData = JSON.stringify(jsonObject);
+
+  // Send form data to Google Apps Script endpoint
+  fetch('https://script.google.com/macros/s/AKfycbwYC0nnr6V7v-s8I15O7_DbSfH6yznbJa3cRiOHVcKFsUHdBrtDIsZj9xhuLftRPBQS/exec', {
+    method: 'POST',
+    body: jsonData
+  })
+  .then(response => response.text())
+  .then(data => {
+    console.log(data);
+    // Optionally, display a success message to the user
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    // Optionally, display an error message to the user
+  });
+});
+</script>
+
+</body>
+</html>
